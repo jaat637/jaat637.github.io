@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PAID COURSES FREE </title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fffbe6; padding: 20px; }
+    h1 { text-align: center; color: #c0392b; }
+    .btn { background-color: #ff4500; color: white; padding: 14px 25px; border: none; border-radius: 6px; margin: 10px; font-size: 16px; cursor: pointer; }
+    .btn:disabled { background-color: #ccc; cursor: not-allowed; }
+    .links { display: none; margin-top: 30px; }
+    .links a { display: block; margin: 10px 0; font-weight: bold; color: #2c3e50; text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+    p { text-align: center; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+<h1>PAID COURSES FREE </h1>
+
+<div id="subscribeArea">
+  <p>Access courses after subscribing to YouTube and following WhatsApp channel.</p>
+  <div style="text-align:center;">
+    <button class="btn" id="ytBtn">Subscribe YouTube</button>
+    <button class="btn" id="waBtn">Follow WhatsApp</button>
+  </div>
+</div>
+
+<div class="links" id="courseLinks">
+  <h2>Available Courses:</h2>
+  <a href="https://shorturl.at/sWKMT" target="_blank">Data Science Course – 2025</a>
+  <a href="https://shorturl.at/d6fsW" target="_blank">YouTube Automation – 2025</a>
+  <a href="https://shorturl.at/VRhVu" target="_blank">Adsterra Automation – 2025</a>
+  <a href="https://shorturl.at/ZnQwJ" target="_blank">The BINs Method – 2025</a>
+</div>
+
+<script>
+  let yt = false, wa = false;
+  document.getElementById('ytBtn').onclick = function() {
+    yt = true;
+    this.disabled = true;
+    this.innerText = "Subscribed";
+    window.open("https://youtube.com/@jaatwrites", "_blank");
+    showLinks();
+  };
+  document.getElementById('waBtn').onclick = function() {
+    wa = true;
+    this.disabled = true;
+    this.innerText = "Followed";
+    window.open("https://whatsapp.com/channel/0029VbA6VdqA2pL4pBhOnI3R", "_blank");
+    showLinks();
+  };
+  function showLinks() {
+    if (yt && wa) {
+      document.getElementById('subscribeArea').style.display = 'none';
+      document.getElementById('courseLinks').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
